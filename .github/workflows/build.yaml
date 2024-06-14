@@ -22,6 +22,6 @@ jobs:
         #### AUFGABE COMPILE, DOCKER BUILD UND PUSH
           # hier ist Platz für maven package und docker build
           mvn package
-          docker build --tag ghcr.io/lennoxisbadatcoding/pet_clinic:latest
+          docker build --tag ghcr.io/lennoxisbadatcoding/pet_clinic:latest -f Dockerfile .
           docker login --username lennoxisbadatcoding --password $GITHUB_ACCESSTOKEN
           docker push ghcr.io/lennoxisbadatcoding/pet_clinic:latest
