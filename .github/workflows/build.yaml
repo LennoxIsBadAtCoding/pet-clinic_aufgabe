@@ -23,5 +23,5 @@ jobs:
           # hier ist Platz für maven package und docker build
           mvn package
           docker build --tag ghcr.io/lennoxisbadatcoding/pet_clinic:latest -f Dockerfile .
-          docker login --username lennoxisbadatcoding --password $GITHUB_ACCESSTOKEN
+          docker login --username lennoxisbadatcoding --password $GITHUB_ACCESSTOKEN ghcr.io
           docker push ghcr.io/lennoxisbadatcoding/pet_clinic:latest
